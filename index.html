@@ -7,243 +7,211 @@
 <title>KOBI CLIENT | Official</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+* { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+
+:root {
+    --purple:#b026ff;
+    --light:#df9aff;
+    --gold:#ffd76a;
 }
 
 body {
-    background: #08050e;
-    color: white;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-}
-
-:root {
-    --purple: #b026ff;
-    --light: #df9aff;
-    --gold: #ffd76a;
+    background:#08050e;
+    color:white;
+    font-family:Arial,sans-serif;
+    overflow-x:hidden;
 }
 
 nav {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 22px 7%;
-    background: rgba(8,5,14,.92);
-    border-bottom: 1px solid #61208b;
-    backdrop-filter: blur(15px);
+    position:sticky;
+    top:0;
+    z-index:10;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 7%;
+    background:rgba(8,5,14,.95);
+    border-bottom:1px solid #61208b;
 }
 
 .logo {
-    color: var(--purple);
-    font-size: 27px;
-    font-weight: 900;
-    text-shadow: 0 0 20px var(--purple);
+    color:var(--purple);
+    font-size:27px;
+    font-weight:900;
+    text-shadow:0 0 20px var(--purple);
 }
 
 nav a {
-    color: #ddd;
-    text-decoration: none;
-    margin-left: 22px;
-    font-size: 14px;
+    color:#ddd;
+    text-decoration:none;
+    margin-left:18px;
+    font-size:13px;
 }
 
-nav a:hover {
-    color: var(--light);
-}
+nav a:hover { color:var(--light); }
 
 .hero {
-    min-height: 670px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 70px 20px;
-    background:
-      radial-gradient(ellipse at 50% 45%, #501078 0%, transparent 48%),
-      radial-gradient(ellipse at 15% 80%, #250b42, transparent 45%),
-      #08050e;
+    min-height:670px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:70px 20px;
+    background:radial-gradient(ellipse at 50% 45%,#501078 0%,transparent 48%),#08050e;
 }
 
 .tag {
-    border: 1px solid var(--purple);
-    color: var(--light);
-    padding: 10px 22px;
-    border-radius: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 0 20px #a020ff44;
+    border:1px solid var(--purple);
+    color:var(--light);
+    padding:10px 22px;
+    border-radius:30px;
+    margin-bottom:30px;
+    box-shadow:0 0 20px #a020ff44;
 }
 
 h1 {
-    font-size: clamp(65px, 12vw, 120px);
-    font-weight: 1000;
-    letter-spacing: -5px;
-    text-shadow: 0 0 35px #a020ff;
+    font-size:clamp(65px,12vw,120px);
+    font-weight:1000;
+    letter-spacing:-5px;
+    text-shadow:0 0 35px #a020ff;
 }
 
-h1 span {
-    color: var(--purple);
-}
+h1 span { color:var(--purple); }
 
 .subtitle {
-    font-size: 20px;
-    letter-spacing: 8px;
-    margin-top: 5px;
+    font-size:20px;
+    letter-spacing:8px;
 }
 
 .description {
-    color: #c7a9dc;
-    margin: 25px 0 35px;
-    font-size: 17px;
+    color:#c7a9dc;
+    margin:25px 0 35px;
+    font-size:17px;
+    line-height:1.7;
 }
 
 .button {
-    display: inline-block;
-    padding: 19px 38px;
-    background: linear-gradient(90deg, #8b16d5, #c044ff);
-    color: white;
-    text-decoration: none;
-    border: 1px solid #e1a4ff;
-    border-radius: 10px;
-    font-weight: bold;
-    box-shadow: 0 0 30px #a020ff77;
-    transition: .25s;
+    display:inline-block;
+    padding:19px 38px;
+    background:linear-gradient(90deg,#8b16d5,#c044ff);
+    color:white;
+    text-decoration:none;
+    border:1px solid #e1a4ff;
+    border-radius:10px;
+    font-weight:bold;
+    box-shadow:0 0 30px #a020ff77;
+    transition:.25s;
 }
 
 .button:hover {
-    transform: scale(1.06);
-    box-shadow: 0 0 50px #c044ff;
+    transform:scale(1.06);
+    box-shadow:0 0 50px #c044ff;
 }
 
 .version {
-    color: #90799e;
-    font-size: 13px;
-    margin-top: 20px;
+    color:#90799e;
+    font-size:13px;
+    margin-top:20px;
 }
 
-section {
-    padding: 90px 8%;
-}
+section { padding:90px 8%; }
 
 .section-title {
-    font-size: 42px;
-    text-align: center;
-    margin-bottom: 45px;
-    color: var(--light);
-    text-shadow: 0 0 20px var(--purple);
+    font-size:42px;
+    text-align:center;
+    margin-bottom:45px;
+    color:var(--light);
+    text-shadow:0 0 20px var(--purple);
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 22px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:22px;
 }
 
 .card {
-    background: linear-gradient(145deg, #1b1028, #0d0914);
-    border: 1px solid #51216e;
-    border-radius: 17px;
-    padding: 32px;
-    transition: .3s;
+    background:linear-gradient(145deg,#1b1028,#0d0914);
+    border:1px solid #51216e;
+    border-radius:17px;
+    padding:32px;
+    transition:.3s;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    border-color: var(--purple);
-    box-shadow: 0 0 25px #a020ff44;
+    transform:translateY(-8px);
+    border-color:var(--purple);
+    box-shadow:0 0 25px #a020ff44;
 }
 
 .card h3 {
-    color: var(--light);
-    margin-bottom: 15px;
-    font-size: 22px;
+    color:var(--light);
+    margin-bottom:15px;
+    font-size:22px;
 }
 
 .card p {
-    color: #b9a9c4;
-    line-height: 1.6;
+    color:#b9a9c4;
+    line-height:1.6;
 }
 
 .power {
-    text-align: center;
-    border-top: 1px solid #35134a;
-    border-bottom: 1px solid #35134a;
-    background: radial-gradient(ellipse, #32104e, #08050e 70%);
+    text-align:center;
+    border-top:1px solid #35134a;
+    border-bottom:1px solid #35134a;
+    background:radial-gradient(ellipse,#32104e,#08050e 70%);
+}
+
+.portal,.train {
+    width:190px;
+    height:190px;
+    margin:0 auto 30px;
+    border-radius:50%;
+    animation:spin 12s linear infinite;
 }
 
 .portal {
-    width: 190px;
-    height: 190px;
-    margin: 0 auto 30px;
-    border-radius: 50%;
-    border: 7px solid #a020ff;
-    box-shadow: 0 0 25px #a020ff, inset 0 0 35px #a020ff;
-    background: repeating-radial-gradient(
-      circle, #27063d 0px, #a020ff 4px,
-      #180625 10px, #5d1590 16px
-    );
-    animation: spin 9s linear infinite;
+    border:7px solid #a020ff;
+    box-shadow:0 0 25px #a020ff,inset 0 0 35px #a020ff;
+    background:repeating-radial-gradient(circle,#27063d 0px,#a020ff 4px,#180625 10px,#5d1590 16px);
 }
 
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
+@keyframes spin { to { transform:rotate(360deg); } }
 
 .gold {
-    background: radial-gradient(ellipse, #4b3210, #08050e 70%);
-    border-top: 1px solid #8d6824;
-    border-bottom: 1px solid #8d6824;
+    background:radial-gradient(ellipse,#4b3210,#08050e 70%);
+    border-color:#8d6824;
 }
 
 .gold .section-title {
-    color: var(--gold);
-    text-shadow: 0 0 20px #ffbd38;
+    color:var(--gold);
+    text-shadow:0 0 20px #ffbd38;
 }
 
 .train {
-    width: 190px;
-    height: 190px;
-    margin: 0 auto 30px;
-    border-radius: 50%;
-    border: 6px solid var(--gold);
-    box-shadow: 0 0 30px #ffbd38, inset 0 0 35px #ffbd38;
-    background: repeating-conic-gradient(
-      from 0deg, #ffdb77 0deg 8deg,
-      #44270a 8deg 18deg
-    );
-    animation: spin 18s linear infinite;
+    border:6px solid var(--gold);
+    box-shadow:0 0 30px #ffbd38,inset 0 0 35px #ffbd38;
+    background:repeating-conic-gradient(#ffdb77 0deg 8deg,#44270a 8deg 18deg);
 }
 
 .gold .button {
-    background: linear-gradient(90deg, #91621a, #e5b94e);
-    border-color: var(--gold);
-    box-shadow: 0 0 25px #ffbd3866;
+    background:linear-gradient(90deg,#91621a,#e5b94e);
+    border-color:var(--gold);
+    box-shadow:0 0 25px #ffbd3866;
 }
 
 footer {
-    text-align: center;
-    padding: 35px;
-    color: #887794;
-    border-top: 1px solid #35134a;
+    text-align:center;
+    padding:35px;
+    color:#887794;
+    border-top:1px solid #35134a;
 }
 
-@media(max-width: 650px) {
-    nav {
-        flex-direction: column;
-        gap: 18px;
-    }
-    nav a {
-        margin: 0 7px;
-        font-size: 12px;
-    }
-    h1 { letter-spacing: -2px; }
+@media(max-width:650px) {
+    nav { flex-direction:column; gap:18px; }
+    nav a { margin:0 6px; font-size:11px; }
+    h1 { letter-spacing:-2px; }
 }
 </style>
 </head>
@@ -265,11 +233,7 @@ footer {
     <div class="tag">✦ THE NEXT LEVEL OF MINECRAFT</div>
     <h1>KOBI<span>✦</span></h1>
     <div class="subtitle">CLIENT</div>
-
-    <p class="description">
-        Dein Minecraft Client. Deine Features. Dein Style.
-    </p>
-
+    <p class="description">Dein Minecraft Client. Deine Features. Dein Style.</p>
     <a class="button" href="#download">↓ DISCOVER KOBI</a>
 </header>
 
@@ -298,19 +262,13 @@ footer {
 <section class="power" id="kamui">
     <div class="portal"></div>
     <h2 class="section-title">KAMUI</h2>
-    <p class="description">
-        ENTER ANOTHER DIMENSION.<br>
-        Raum. Zeit. Eine andere Welt.
-    </p>
+    <p class="description">ENTER ANOTHER DIMENSION.<br>Raum. Zeit. Eine andere Welt.</p>
 </section>
 
 <section class="power gold" id="love-train">
     <div class="train"></div>
     <h2 class="section-title">D4C LOVE TRAIN</h2>
-    <p class="description">
-        BEYOND THE LIMITS.<br>
-        Goldenes Licht. Unendliche Energie.
-    </p>
+    <p class="description">BEYOND THE LIMITS.<br>Goldenes Licht. Unendliche Energie.</p>
 </section>
 
 <section id="download">
@@ -319,7 +277,7 @@ footer {
         Bereit für dein nächstes Minecraft-Abenteuer?
     </p>
     <div style="text-align:center">
-        <a class="button" href="downloads/kobi-client-1.0.0.jar" download>
+        <a class="button" href="kobi-client-1.0.0%20-%20Kopie.jar" download>
             ↓ DOWNLOAD KOBI CLIENT
         </a>
         <p class="version">Version 1.0.0 · Minecraft 1.21.11 · Fabric</p>
